@@ -13,8 +13,11 @@ Install a link for development work:
 Thee manifest.in file is used for data files.
 
 """
-
+import sys
 import os
+
+if sys.version_info < (2, 7):
+    raise Exception("Python >= 2.7 is required.")
 
 from setuptools import setup, find_packages
 
